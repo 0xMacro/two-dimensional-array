@@ -7,6 +7,6 @@ git clone https://github.com/Hacker-DAO/two-dimensional-array.git
 
 cd two-dimensional-array
 
-npm init
+npm install
 
 npx hardhat test
