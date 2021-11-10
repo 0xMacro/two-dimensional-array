@@ -7,11 +7,13 @@ https://github.com/Hacker-DAO/two-dimensional-array
 ```
     contract Story {
 
-        string[][3] x;
+        string[3] private v;
+        string[] private w;
+        string[][3] private x;
 
     }
 ```
-Describe x as fully as you can. For instance what type is it, what type of data can be stored in it, how much data can it hold, and what type of storage will it use?
+Describe each of v, w and x. For instance what type is it, what type of data can be stored in it, how much data can it hold, who can see it, and will the values be held in memory or storage?
 
 2. Look at these two contracts:
 ```
