@@ -11,9 +11,17 @@ https://github.com/Hacker-DAO/two-dimensional-array
         string[] private w;
         string[][3] private x;
 
+        struct Voter {
+            uint weight;
+            bool voted;
+            address delegate;
+            uint vote;
+        }
+
+        Voter[] private y;
     }
 ```
-Describe each of v, w and x. For instance what type is it, what type of data can be stored in it, how much data can it hold, who can see it, and will the values be held in memory or storage?
+Describe each of v, w, x and y. For instance what type is it, what type of data can be stored in it, how much data can it hold, who can see it, and will the values be held in memory or storage?
 
 2. Look at these two contracts:
 ```
