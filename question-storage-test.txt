@@ -1,0 +1,54 @@
+Given the following contract:
+
+```
+pragma solidity 0.8.2;
+
+contract Storage {
+
+    uint[] public x = [1, 2, 3];
+
+    function f(uint[] memory y) public {
+        x = y;
+        uint[] storage z = x;
+        g(z);
+        h(z);
+    }
+
+    function g(uint[] storage v) private {
+        v[1] = v[2];
+    } 
+
+    function h(uint[] memory w) private {
+        w[2] = w[0];
+    }
+
+}
+```
+
+and the following test:
+
+```
+const { expect } = require("chai")
+
+describe("Storage contract", function () {
+
+    let storage
+    
+    beforeEach(async function () {
+        storageFactory = await ethers.getContractFactory("Storage")
+        storage = await storageFactory.deploy()
+        await storage.deployed()
+    })
+
+    it("will do what?", async function () {
+      await storage.f([4, 5, 6])
+      expect(await storage.x(0)).to.equal(???)
+      expect(await storage.x(1)).to.equal(???)
+      expect(await storage.x(2)).to.equal(???)
+    })
+
+})
+
+```
+
+What should replace the question marks in the last 3 lines of the test to make it pass?

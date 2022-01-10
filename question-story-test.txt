@@ -1,0 +1,41 @@
+Given this contract:
+
+```
+pragma solidity 0.8.2;
+
+contract Story {
+
+    string[][3] private x = [["Once", "upon",  "a",       "time"],
+                             ["in",   "a",     "kingdom", "far" ],
+                             ["away", "there", "lived",   "a"   ]];
+
+    function getWord(uint index1, uint index2) public view returns (string memory) {
+        return x[index1][index2];
+    }
+
+}
+```
+
+and this test:
+
+```
+const { expect } = require("chai")
+
+describe("Story contract", function () {
+
+    let story
+    
+    beforeEach(async function () {
+        storyFactory = await ethers.getContractFactory("Story")
+        story = await storyFactory.deploy()
+        await story.deployed()
+    })
+
+    it("word at x[2][1] is 'there'", async function () {
+        expect(await story.getWord(2, 1)).to.equal(???)
+    })
+
+})
+```
+
+What should replace the question marks in the last line of the test to make it pass?

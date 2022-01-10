@@ -1,13 +1,10 @@
 Multi Dimensional Array Access
 
-https://github.com/Hacker-DAO/two-dimensional-array
-
-
-1. Look at the following fragment of a contract:
+Look at the following fragment of a contract:
 ```
     contract Story {
 
-        string[3] private v;
+        string[3] public v;
         string[] private w;
         string[][3] private x;
 
@@ -23,34 +20,3 @@ https://github.com/Hacker-DAO/two-dimensional-array
 ```
 Describe each of v, w, x and y. For instance what type is it, what type of data can be stored in it, how much data can it hold, who can see it, and will the values be held in memory or storage?
 
-2. Look at these two contracts:
-```
-    contract Story1 {
-    
-        string[][3] private x = [["Once", "upon",  "a",       "time"],
-                                 ["in",   "a",     "kingdom", "far" ],
-                                 ["away", "there", "lived",   "a"   ]];
-    
-        function getWord(uint index1, uint index2) public view returns (string memory) {
-            return x[index1][index2];
-        }
-    
-    }
-    
-    contract Story2 {
-    
-        string[][3] private x = [["Once",    "upon",  "a"   ],
-                                 ["time",    "in",    "a"   ],
-                                 ["kingdom", "far",   "away"],
-                                 ["there",   "lived", "a"   ]];
-    
-        function getWord(uint index1, uint index2) public view returns (string memory) {
-            return x[index1][index2];
-        }
-    
-    }
-```
-Are either of these contracts valid: will they compile, can they be deployed?
-
-
-For any that are valid, what value will getWord(2, 1) return? Will calling it cost you any gas?
