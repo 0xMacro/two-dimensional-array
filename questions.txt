@@ -2,7 +2,7 @@ Multi Dimensional Array Access
 
 Look at the following fragment of a contract:
 ```
-    contract Story {
+    contract EventsAndArrays {
 
         string[3] public v;
         string[] private w;
@@ -16,6 +16,9 @@ Look at the following fragment of a contract:
         }
 
         Voter[] private y;
+        
+        event MsgSent(address indexed sender, string message);
+        event NoteAdded(string indexed summary, string detail);
     }
 ```
 Describe each of v, w, x and y. For instance what type is it, what type of data can be stored in it, how much data can it hold, who can see it, and will the values be held in memory or storage?

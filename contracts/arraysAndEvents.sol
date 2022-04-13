@@ -2,7 +2,7 @@
 
 pragma solidity 0.8.2;
 
-contract Story {
+contract ArraysAndEvents {
 
     string[3] private v;
     string[] private w;
