@@ -21,5 +21,5 @@ Look at the following fragment of a contract:
 ```
 1. Describe each of v, w, x and y. For instance what type is it, what type of data can be stored in it, how much data can it hold, who can see it, and will the values be held in memory or storage?
 
-2. Look at the events? What data will be recorded in them? Where will they be stored and who or what can see them? What are the effects and tradeoffs of marking a field with the `indexed` keyword? 
+2. Look at the events. What data will be recorded in them? Where will they be stored and who or what can see them? What are the effects and tradeoffs of marking a field with the `indexed` keyword? 
 
