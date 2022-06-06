@@ -6,7 +6,7 @@ contract Storage {
 
     uint[] public x = [1, 2, 3];
 
-    function f(uint[] memory y) public {
+    function f(uint[] calldata y) external {
         x = y;
         uint[] storage z = x;
         g(z);
